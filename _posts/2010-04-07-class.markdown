@@ -3,14 +3,17 @@ layout: default
 title: class macro
 ---
 
-    (class bank-account
-    
-      ((mutable balance))
-    
-      ((deposit amount)
-       (balance! (+ balance amount)))
-    
-      ((withdraw amount)
-       (when (> amount balance)
-         (error #t "Account overdrawn"))
-       (balance! (- balance amount))))
+{% highlight scheme %}
+(class bank-account
+       
+  ((mutable balance))
+  
+  ((deposit amount)
+   (balance! (+ balance amount)))
+  
+  ((withdraw amount)
+   (when (> amount balance)
+     (error #t "Account overdrawn"))
+   (balance! (- balance amount))))
+{% endhighlight %}
+
