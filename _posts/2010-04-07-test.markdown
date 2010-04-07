@@ -5,4 +5,3 @@ title: test
 
 test
 
-<script src="http://gist.github.com/358956.js?file=context-free-art-implementations.md"></script>
